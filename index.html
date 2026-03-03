@@ -8,8 +8,8 @@
   <meta name="p:domain_verify" content="ecdefa7ec6cd6c4c03d93777752a1885"/>
 
   <!-- SEO -->
-  <title>Sparked Connection Articles | Relationship Psychology & Modern Dating</title>
-  <meta name="description" content="Luxury editorial relationship articles by Sparked Connection. Explore love languages, modern dating psychology, and smarter ways to meet compatible people - without swipe fatigue.">
+  <title>Sparked Connection Journal | Relationship Psychology & Modern Dating</title>
+  <meta name="description" content="Luxury editorial relationship articles by Sparked Connection. Explore love languages, modern dating psychology, and smarter ways to meet compatible people — without swipe fatigue.">
   <meta name="author" content="Sparked Connection Editorial">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <link rel="canonical" href="https://articles.sparkedconnection.com/" />
@@ -18,72 +18,75 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_GB">
   <meta property="og:site_name" content="Sparked Connection">
-  <meta property="og:title" content="Sparked Connection Articles - Relationship Psychology & Modern Dating">
-  <meta property="og:description" content="Luxury editorial relationship articles: love languages, dating burnout, and how to meet emotionally aligned people.">
+  <meta property="og:title" content="Sparked Connection Journal — Relationship Psychology & Modern Dating">
+  <meta property="og:description" content="Luxury editorial relationship articles: love languages, modern dating psychology, and smarter matchmaking without swipe fatigue.">
   <meta property="og:url" content="https://articles.sparkedconnection.com/">
+  <!-- Use a hub image if you have one. If not, leave as a safe default. -->
   <meta property="og:image" content="https://articles.sparkedconnection.com/assets/articles-hub-sparkedconnection.png">
-  <meta property="og:image:alt" content="Sparked Connection editorial articles hub">
+  <meta property="og:image:alt" content="Sparked Connection Journal articles hub">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Sparked Connection Articles - Relationship Psychology & Modern Dating">
-  <meta name="twitter:description" content="Explore love languages, modern dating psychology, and smarter matchmaking without swipe fatigue.">
+  <meta name="twitter:title" content="Sparked Connection Journal — Relationship Psychology & Modern Dating">
+  <meta name="twitter:description" content="Explore love languages, modern dating psychology, and smarter ways to meet compatible people — without swipe fatigue.">
   <meta name="twitter:image" content="https://articles.sparkedconnection.com/assets/articles-hub-sparkedconnection.png">
-  <meta name="twitter:image:alt" content="Sparked Connection editorial articles hub">
+  <meta name="twitter:image:alt" content="Sparked Connection Journal articles hub">
 
-  <!-- JSON-LD: Sparked Connection Journal (Publisher + WebSite + Series + CollectionPage + hasPart Articles) -->
+  <!-- JSON-LD: Sparked Connection Journal (CollectionPage + WebSite + Series + Articles Authority Loop) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
-      {
+    "@type": "CollectionPage",
+    "@id": "https://articles.sparkedconnection.com/#collection",
+    "url": "https://articles.sparkedconnection.com/",
+    "name": "Sparked Connection Journal",
+    "description": "Luxury editorial relationship articles by Sparked Connection covering love languages, modern dating psychology and emotionally aligned connection.",
+    "inLanguage": "en-GB",
+
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://articles.sparkedconnection.com/#website",
+      "name": "Sparked Connection Articles",
+      "url": "https://articles.sparkedconnection.com/"
+    },
+
+    "publisher": {
+      "@type": "Organization",
+      "name": "Sparked Connection",
+      "url": "https://sparkedconnection.com"
+    },
+
+    "mainEntity": {
+      "@type": "CreativeWorkSeries",
+      "@id": "https://articles.sparkedconnection.com/#series",
+      "name": "Sparked Connection Journal",
+      "url": "https://articles.sparkedconnection.com/",
+      "publisher": {
         "@type": "Organization",
-        "@id": "https://articles.sparkedconnection.com/#publisher",
         "name": "Sparked Connection",
         "url": "https://sparkedconnection.com"
       },
-      {
+      "isPartOf": {
         "@type": "WebSite",
-        "@id": "https://articles.sparkedconnection.com/#website",
-        "url": "https://articles.sparkedconnection.com/",
-        "name": "Sparked Connection Articles",
-        "publisher": { "@id": "https://articles.sparkedconnection.com/#publisher" }
+        "@id": "https://articles.sparkedconnection.com/#website"
       },
-      {
-        "@type": "CreativeWorkSeries",
-        "@id": "https://articles.sparkedconnection.com/#series",
-        "name": "Sparked Connection Journal",
-        "url": "https://articles.sparkedconnection.com/",
-        "publisher": { "@id": "https://articles.sparkedconnection.com/#publisher" },
-        "isPartOf": { "@id": "https://articles.sparkedconnection.com/#website" }
-      },
-      {
-        "@type": "CollectionPage",
-        "@id": "https://articles.sparkedconnection.com/#collection",
-        "url": "https://articles.sparkedconnection.com/",
-        "name": "Sparked Connection Journal",
-        "description": "Luxury editorial relationship articles by Sparked Connection covering love languages, modern dating psychology and emotionally aligned connection.",
-        "inLanguage": "en-GB",
-        "isPartOf": { "@id": "https://articles.sparkedconnection.com/#website" },
-        "mainEntity": { "@id": "https://articles.sparkedconnection.com/#series" },
-        "hasPart": [
-          {
-            "@type": "Article",
-            "@id": "https://articles.sparkedconnection.com/online-dating-effects/#article",
-            "headline": "How Online Dating Changed Everything - And Not For The Better",
-            "url": "https://articles.sparkedconnection.com/online-dating-effects/",
-            "datePublished": "2026-02-26"
-          },
-          {
-            "@type": "Article",
-            "@id": "https://articles.sparkedconnection.com/love-language/#article",
-            "headline": "Love Languages Explained — How They Shape Relationships",
-            "url": "https://articles.sparkedconnection.com/love-language/",
-            "datePublished": "2026-02-01"
-          }
-        ]
-      }
-    ]
+      "hasPart": [
+        {
+          "@type": "Article",
+          "@id": "https://articles.sparkedconnection.com/online-dating-effects/#article",
+          "headline": "How Online Dating Changed Everything - And Not For The Better",
+          "url": "https://articles.sparkedconnection.com/online-dating-effects/",
+          "datePublished": "2026-02-26"
+        },
+        {
+          "@type": "Article",
+          "@id": "https://articles.sparkedconnection.com/love-language/#article",
+          "headline": "Love Languages Explained — How They Shape Relationships",
+          "url": "https://articles.sparkedconnection.com/love-language/",
+          "datePublished": "2026-02-01"
+        }
+      ]
+    }
   }
   </script>
 
@@ -119,6 +122,7 @@
     a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
     a:hover { opacity: 0.85; }
 
+    /* ---- HEADER ---- */
     header {
       background: var(--warm-navy);
       color: var(--cream);
@@ -139,6 +143,23 @@
 
     header * { color: var(--cream); }
 
+    /* ---- LOGO ---- */
+    .logo-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 22px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .brand-logo {
+      width: 230px;
+      max-width: 78%;
+      height: auto;
+      opacity: 0.96;
+      filter: drop-shadow(0 2px 10px rgba(0,0,0,0.15));
+    }
+
     .eyebrow {
       font-family: 'Josefin Sans', sans-serif;
       font-size: 11px;
@@ -146,6 +167,8 @@
       text-transform: uppercase;
       color: var(--terracotta);
       margin-bottom: 22px;
+      position: relative;
+      z-index: 1;
     }
 
     h1 {
@@ -155,6 +178,8 @@
       line-height: 1.06;
       max-width: 960px;
       margin: 0 auto 22px;
+      position: relative;
+      z-index: 1;
     }
 
     h1 em { font-style: italic; color: var(--dusty-rose); }
@@ -165,6 +190,8 @@
       color: rgba(250,246,239,0.70);
       max-width: 720px;
       margin: 0 auto 34px;
+      position: relative;
+      z-index: 1;
     }
 
     .divider-header {
@@ -172,8 +199,11 @@
       height: 1px;
       background: var(--terracotta);
       margin: 0 auto;
+      position: relative;
+      z-index: 1;
     }
 
+    /* ---- META STRIP ---- */
     .meta {
       background: var(--warm-white);
       border-bottom: 1px solid var(--line);
@@ -190,6 +220,7 @@
       text-align: center;
     }
 
+    /* ---- BODY ---- */
     .wrap {
       max-width: 1120px;
       margin: 0 auto;
@@ -209,6 +240,7 @@
       line-height: 1.6;
     }
 
+    /* ---- GRID ---- */
     .grid {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
@@ -319,6 +351,7 @@
 
     .secondary:hover { opacity: 0.85; }
 
+    /* ---- CTA ---- */
     .cta {
       margin-top: 64px;
       padding: 54px 42px;
@@ -337,7 +370,7 @@
       pointer-events: none;
     }
 
-    .cta * { color: var(--cream); }
+    .cta * { color: var(--cream); position: relative; z-index: 1; }
 
     .cta .cta-eyebrow {
       font-family: 'Josefin Sans', sans-serif;
@@ -383,6 +416,7 @@
 
     .cta .cta-btn:hover { background: transparent; color: var(--cream); opacity: 1; }
 
+    /* ---- FOOTER ---- */
     footer {
       background: var(--ink);
       color: rgba(250,246,239,0.45);
@@ -394,6 +428,7 @@
       text-transform: uppercase;
     }
 
+    /* ---- RESPONSIVE ---- */
     @media (max-width: 900px) {
       .card { grid-column: span 12; }
     }
@@ -407,15 +442,26 @@
       .card-actions { padding: 0 22px 22px; }
       .cta { padding: 42px 22px; }
       .cta h3 { font-size: 1.6rem; }
+      .brand-logo { width: 210px; }
     }
   </style>
 </head>
 
 <body>
   <header>
+    <!-- Logo -->
+    <div class="logo-wrap">
+      <img
+        src="/assets/sparked-connection-logo.png"
+        alt="Sparked Connection logo"
+        class="brand-logo"
+        loading="eager"
+      >
+    </div>
+
     <p class="eyebrow">Sparked Connection Editorial</p>
     <h1>Relationship <em>Psychology</em> &amp; Modern Dating</h1>
-    <p class="subtitle">Thoughtful, data-aware articles for professionals who want real connection - not swipe fatigue.</p>
+    <p class="subtitle">Thoughtful, data-aware articles for professionals who want real connection — not swipe fatigue.</p>
     <div class="divider-header"></div>
   </header>
 
@@ -428,7 +474,7 @@
 
   <main class="wrap">
     <section class="intro" aria-label="Introduction">
-      <p>Our editorial library explores how modern dating shapes behaviour - and how emotionally aligned compatibility can change everything.</p>
+      <p>Our editorial library explores how modern dating shapes behaviour — and how emotionally aligned compatibility can change everything.</p>
     </section>
 
     <section class="grid" aria-label="Articles">
@@ -450,8 +496,8 @@
             <span class="badge">Modern Dating</span>
             <span class="readtime">14 Min Read</span>
           </div>
-          <h2>How Online Dating <em>Changed</em> Everything - And Not For The Better</h2>
-          <p class="excerpt">Online dating promised easier love. Instead it fuelled disposability, burnout, and the quiet erosion of emotional accountability. Here’s what the data suggests - and what to do differently.</p>
+          <h2>How Online Dating <em>Changed</em> Everything — And Not For The Better</h2>
+          <p class="excerpt">Online dating promised easier love. Instead it fuelled disposability, burnout, and the erosion of emotional accountability. Here’s what the data suggests — and what to do differently.</p>
         </div>
 
         <div class="card-actions">
@@ -478,7 +524,7 @@
             <span class="readtime">12 Min Read</span>
           </div>
           <h2>Love Languages <em>Explained</em>: How They Shape Relationships</h2>
-          <p class="excerpt">Not a lack of love - a failure of translation. Learn the five love languages and how emotional fluency can turn effort into feeling truly loved.</p>
+          <p class="excerpt">Not a lack of love — a failure of translation. Learn the five love languages and how emotional fluency turns effort into feeling truly loved.</p>
         </div>
 
         <div class="card-actions">
@@ -491,8 +537,8 @@
 
     <section class="cta" aria-label="Call to action">
       <div class="cta-eyebrow">The Sparked Connection Method</div>
-      <h3>Meet someone who is compatible in the ways that <em>actually</em> matter</h3>
-      <p>We combine personality insights with human judgement to make introductions that feel aligned - not random. No swiping. No time-wasting. Just thoughtful matchmaking for professionals.</p>
+      <h3>Meet someone compatible in the ways that <em>actually</em> matter</h3>
+      <p>We combine personality insights with human judgement to make introductions that feel aligned — not random. No swiping. No time-wasting. Just thoughtful matchmaking for professionals.</p>
       <a class="cta-btn" href="https://sparkedconnection.com/">Join the Singles Network</a>
     </section>
   </main>
