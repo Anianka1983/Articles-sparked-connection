@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://articles.sparkedconnection.com/sitemap.xml
+
+# Block unnecessary system files
+Disallow: /.github/
+Disallow: /README.md
