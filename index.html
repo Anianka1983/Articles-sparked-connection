@@ -21,7 +21,6 @@
   <meta property="og:title" content="Sparked Connection Journal - Relationship Psychology & Modern Dating">
   <meta property="og:description" content="Luxury editorial relationship articles: love languages, modern dating psychology, and smarter matchmaking without swipe fatigue.">
   <meta property="og:url" content="https://articles.sparkedconnection.com/">
-  <!-- Use a hub image if you have one. If not, leave as a safe default. -->
   <meta property="og:image" content="https://articles.sparkedconnection.com/assets/articles-hub-sparkedconnection.png">
   <meta property="og:image:alt" content="Sparked Connection Journal articles hub">
 
@@ -42,20 +41,17 @@
     "name": "Sparked Connection Journal",
     "description": "Luxury editorial relationship articles by Sparked Connection covering love languages, modern dating psychology and emotionally aligned connection.",
     "inLanguage": "en-GB",
-
     "isPartOf": {
       "@type": "WebSite",
       "@id": "https://articles.sparkedconnection.com/#website",
       "name": "Sparked Connection Articles",
       "url": "https://articles.sparkedconnection.com/"
     },
-
     "publisher": {
       "@type": "Organization",
       "name": "Sparked Connection",
       "url": "https://sparkedconnection.com"
     },
-
     "mainEntity": {
       "@type": "CreativeWorkSeries",
       "@id": "https://articles.sparkedconnection.com/#series",
@@ -84,14 +80,15 @@
           "headline": "Love Languages Explained - How They Shape Relationships",
           "url": "https://articles.sparkedconnection.com/love-language/",
           "datePublished": "2026-02-01"
+        },
+        {
+          "@type": "Article",
+          "@id": "https://articles.sparkedconnection.com/is-matchmaking-better-than-dating-apps/#article",
+          "headline": "Is Matchmaking Better Than Dating Apps?",
+          "url": "https://articles.sparkedconnection.com/is-matchmaking-better-than-dating-apps/",
+          "datePublished": "2026-03-14"
         }
-{
- "@type": "Article",
- "@id": "https://articles.sparkedconnection.com/is-matchmaking-better-than-dating-apps/#article",
- "headline": "Is Matchmaking Better Than Dating Apps?",
- "url": "https://articles.sparkedconnection.com/is-matchmaking-better-than-dating-apps/",
- "datePublished": "2026-03-14"
-}      ]
+      ]
     }
   }
   </script>
@@ -128,7 +125,6 @@
     a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
     a:hover { opacity: 0.85; }
 
-    /* ---- HEADER ---- */
     header {
       background: var(--warm-navy);
       color: var(--cream);
@@ -149,7 +145,6 @@
 
     header * { color: var(--cream); }
 
-    /* ---- LOGO ---- */
     .logo-wrap {
       display: flex;
       justify-content: center;
@@ -209,7 +204,6 @@
       z-index: 1;
     }
 
-    /* ---- META STRIP ---- */
     .meta {
       background: var(--warm-white);
       border-bottom: 1px solid var(--line);
@@ -226,7 +220,6 @@
       text-align: center;
     }
 
-    /* ---- BODY ---- */
     .wrap {
       max-width: 1120px;
       margin: 0 auto;
@@ -246,7 +239,6 @@
       line-height: 1.6;
     }
 
-    /* ---- GRID ---- */
     .grid {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
@@ -357,7 +349,6 @@
 
     .secondary:hover { opacity: 0.85; }
 
-    /* ---- CTA ---- */
     .cta {
       margin-top: 64px;
       padding: 54px 42px;
@@ -422,7 +413,6 @@
 
     .cta .cta-btn:hover { background: transparent; color: var(--cream); opacity: 1; }
 
-    /* ---- FOOTER ---- */
     footer {
       background: var(--ink);
       color: rgba(250,246,239,0.45);
@@ -433,54 +423,48 @@
       letter-spacing: 0.25em;
       text-transform: uppercase;
     }
-/* ---- Luxury Editorial Entrance Animation ---- */
 
-@keyframes fadeUpSoft {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+    @keyframes fadeUpSoft {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-/* Logo animation */
-.brand-logo {
-  animation: fadeUpSoft 0.9s ease forwards;
-  opacity: 0;
-  animation-delay: 0.1s;
-}
+    .brand-logo {
+      animation: fadeUpSoft 0.9s ease forwards;
+      opacity: 0;
+      animation-delay: 0.1s;
+    }
 
-/* Eyebrow */
-.eyebrow {
-  animation: fadeUpSoft 0.9s ease forwards;
-  opacity: 0;
-  animation-delay: 0.25s;
-}
+    .eyebrow {
+      animation: fadeUpSoft 0.9s ease forwards;
+      opacity: 0;
+      animation-delay: 0.25s;
+    }
 
-/* Main headline */
-h1 {
-  animation: fadeUpSoft 1s ease forwards;
-  opacity: 0;
-  animation-delay: 0.4s;
-}
+    h1 {
+      animation: fadeUpSoft 1s ease forwards;
+      opacity: 0;
+      animation-delay: 0.4s;
+    }
 
-/* Subtitle */
-.subtitle {
-  animation: fadeUpSoft 1s ease forwards;
-  opacity: 0;
-  animation-delay: 0.55s;
-}
+    .subtitle {
+      animation: fadeUpSoft 1s ease forwards;
+      opacity: 0;
+      animation-delay: 0.55s;
+    }
 
-/* Divider line */
-.divider-header {
-  animation: fadeUpSoft 1s ease forwards;
-  opacity: 0;
-  animation-delay: 0.7s;
-}
-    /* ---- RESPONSIVE ---- */
+    .divider-header {
+      animation: fadeUpSoft 1s ease forwards;
+      opacity: 0;
+      animation-delay: 0.7s;
+    }
+
     @media (max-width: 900px) {
       .card { grid-column: span 12; }
     }
@@ -501,7 +485,6 @@ h1 {
 
 <body>
   <header>
-    <!-- Logo -->
     <div class="logo-wrap">
       <img
         src="/assets/sparked-connection-logo.png"
@@ -520,8 +503,8 @@ h1 {
   <div class="meta">
     <span>Curated articles</span>
     <span>London · UK</span>
-    <span>Updated February 2026</span>
-    <span>2 articles live</span>
+    <span>Updated March 2026</span>
+    <span>3 articles live</span>
   </div>
 
   <main class="wrap">
@@ -569,10 +552,7 @@ h1 {
             />
           </a>
         </div>
-<article>
 
-</article>
-  </article>
         <div class="card-inner">
           <div class="card-top">
             <span class="badge">Relationships</span>
@@ -587,34 +567,34 @@ h1 {
           <a class="secondary" href="https://sparkedconnection.com/">Join the Singles Network</a>
         </div>
       </article>
-     <!-- Article 3 -->
-  <article class="card" aria-label="Is Matchmaking Better Than Dating Apps">
 
-<div class="thumb">
-<a href="/is-matchmaking-better-than-dating-apps/" aria-label="Read article about matchmaking vs dating apps">
-<img
-src="/assets/is-matchmaking-better-than-dating-apps-hero.jpg"
-alt="Matchmaking vs dating apps comparison"
-loading="lazy"
-/>
-</a>
-</div>
+      <!-- Article 3 -->
+      <article class="card" aria-label="Is Matchmaking Better Than Dating Apps?">
+        <div class="thumb">
+          <a href="https://articles.sparkedconnection.com/is-matchmaking-better-than-dating-apps/" aria-label="Read Is Matchmaking Better Than Dating Apps?">
+            <img
+              src="/assets/is-matchmaking-better-than-dating-apps-hero.jpg"
+              alt="A comparison between dating apps and modern matchmaking"
+              loading="lazy"
+            />
+          </a>
+        </div>
 
-<div class="article-content">
+        <div class="card-inner">
+          <div class="card-top">
+            <span class="badge">Modern Dating</span>
+            <span class="readtime">8 Min Read</span>
+          </div>
+          <h2>Is Matchmaking Better Than Dating Apps?</h2>
+          <p class="excerpt">Swipe fatigue is real. Explore why more professionals are turning to matchmaking instead of endless dating apps.</p>
+        </div>
 
-<span class="article-category">MODERN DATING</span>
+        <div class="card-actions">
+          <a class="primary" href="https://articles.sparkedconnection.com/is-matchmaking-better-than-dating-apps/">Read article</a>
+          <a class="secondary" href="https://sparkedconnection.com/">Explore Matchmaking</a>
+        </div>
+      </article>
 
-<h3>Is Matchmaking Better Than Dating Apps?</h3>
-
-<p>
-Swipe fatigue is real. Explore why more professionals are turning to matchmaking instead of endless dating apps.
-</p>
-
-<a href="/is-matchmaking-better-than-dating-apps/" class="read-article">
-Read Article
-</a>
-
-</div>
     </section>
 
     <section class="cta" aria-label="Call to action">
