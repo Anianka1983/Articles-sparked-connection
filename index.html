@@ -481,9 +481,245 @@
       .brand-logo { width: 210px; }
     }
   </style>
+
+  <style>
+    /* Sparked Connection main-page top panel */
+    :root {
+      --background: 22 38% 95%;
+      --foreground: 220 45% 20%;
+      --border: 36 20% 88%;
+      --ring: 220 50% 25%;
+      --accent: 340 55% 45%;
+      --accent-foreground: 0 0% 100%;
+      --shadow-md: 0 4px 6px -1px hsl(220 30% 20% / .06), 0 2px 4px -2px hsl(220 30% 20% / .04);
+    }
+
+    body { padding-top: 80px; }
+    @media (min-width: 768px) { body { padding-top: 100px; } }
+
+    .sc-topnav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: hsla(var(--background), .95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid hsl(var(--border));
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+    }
+    .sc-topnav-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    .sc-topnav-row {
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    @media (min-width: 768px) {
+      .sc-topnav-row { height: 80px; }
+    }
+    .sc-topnav-brand {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      text-decoration: none;
+      line-height: 0;
+    }
+    .sc-site-logo {
+      height: 80px;
+      width: auto;
+      display: block;
+      transform: translateX(100px);
+    }
+    @media (min-width: 768px) {
+      .sc-site-logo { height: 100px; }
+    }
+    .sc-topnav-links {
+      display: none;
+      align-items: center;
+      gap: 2rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (min-width: 768px) {
+      .sc-topnav-links { display: flex; }
+    }
+    .sc-topnav-links a {
+      text-decoration: none;
+      color: hsl(220 20% 45%);
+      transition: color .2s ease;
+      font-weight: 500;
+      font-size: .875rem;
+      white-space: nowrap;
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+    }
+    .sc-topnav-links a:hover { color: hsl(220 50% 25%); opacity: 1; }
+    .sc-topnav-links .sc-refer-link { color: hsl(340 55% 45%); }
+
+    .sc-topnav-cta-wrap {
+      display: none;
+      position: relative;
+      left: -102px;
+      flex-shrink: 0;
+    }
+    @media (min-width: 768px) {
+      .sc-topnav-cta-wrap { display: block; }
+    }
+    .sc-topnav-cta-wrap a,
+    .sc-mobile-menu-cta {
+      text-decoration: none;
+    }
+    .sc-cta-spark-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      white-space: nowrap;
+      height: 40px;
+      padding: .5rem 1rem;
+      border: 0;
+      border-radius: 9999px;
+      background: hsl(var(--accent));
+      color: hsl(var(--accent-foreground));
+      font-size: .875rem;
+      font-weight: 500;
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+      box-shadow: 0 4px 6px rgba(178, 52, 94, .25), 0 2px 3px rgba(178, 52, 94, .15), inset 0 1px rgba(255,255,255,.15);
+      overflow: hidden;
+      position: relative;
+      transform: translateY(0);
+      transition: all .4s cubic-bezier(.4,0,.2,1);
+      cursor: pointer;
+    }
+    .sc-cta-spark-btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,236,200,.45), transparent);
+      pointer-events: none;
+      z-index: 1;
+    }
+    .sc-cta-spark-btn:hover {
+      transform: translateY(-3px) scale(1.04);
+      box-shadow: 0 8px 20px rgba(178,52,94,.35), 0 4px 8px rgba(178,52,94,.2), inset 0 1px rgba(255,255,255,.2);
+    }
+    .sc-cta-spark-btn:hover::before { animation: sc-spark-sweep .6s ease-out forwards; }
+    @keyframes sc-spark-sweep { 0% { left: -60%; } 100% { left: 120%; } }
+
+    .sc-mobile-menu-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1001;
+      padding: .5rem;
+      background: transparent;
+      border: 0;
+      color: hsl(var(--foreground));
+    }
+    @media (min-width: 768px) {
+      .sc-mobile-menu-toggle { display: none; }
+    }
+    .sc-mobile-menu-toggle:focus-visible {
+      outline: 2px solid hsl(var(--ring));
+      outline-offset: 2px;
+      border-radius: .5rem;
+    }
+    .sc-mobile-menu-toggle svg {
+      width: 24px;
+      height: 24px;
+      stroke: currentColor;
+    }
+    .sc-mobile-menu-panel {
+      display: none;
+      position: fixed;
+      top: 5.5rem;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      background: hsl(var(--background));
+      border-bottom: 1px solid hsl(var(--border));
+      box-shadow: var(--shadow-md);
+      padding: 1rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+    }
+    .sc-mobile-menu-panel.open { display: block; }
+    .sc-mobile-menu-link {
+      display: block;
+      padding: .875rem 0;
+      color: hsl(var(--foreground));
+      font-weight: 500;
+      border-bottom: 1px solid hsl(var(--border));
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    .sc-mobile-menu-link:last-child { border-bottom: 0; }
+    .sc-mobile-menu-link.sc-refer-link { color: hsl(340 55% 45%); font-weight: 600; }
+    .sc-mobile-menu-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-top: 1rem;
+    }
+  </style>
+
 </head>
 
 <body>
+
+  <nav class="sc-topnav">
+    <div class="sc-topnav-inner">
+      <div class="sc-topnav-row">
+        <a class="sc-topnav-brand" href="https://sparkedconnection.com/">
+          <img src="/logo.svg" alt="Sparked Connection" class="sc-site-logo">
+        </a>
+
+        <div class="sc-topnav-links">
+          <a href="https://sparkedconnection.com/#how-it-works">How It Works</a>
+          <a href="https://sparkedconnection.com/plans/">Plans</a>
+          <a href="https://sparkedconnection.com/#events">Events</a>
+          <a href="https://sparkedconnection.com/the-science/">The Science</a>
+          <a href="https://articles.sparkedconnection.com/" rel="noopener noreferrer" target="_blank">Journal</a>
+          <a class="sc-refer-link" href="https://www.sparkedconnection.com/refer-a-friend">Refer a Friend</a>
+        </div>
+
+        <div class="sc-topnav-cta-wrap">
+          <a href="https://sparkedconnection.com/enquiry" rel="noopener noreferrer" target="_blank">
+            <button class="sc-cta-spark-btn">Create Free Profile</button>
+          </a>
+        </div>
+
+        <button aria-label="Toggle menu" class="sc-mobile-menu-toggle" id="sc-mobile-menu-toggle" aria-expanded="false" aria-controls="sc-mobile-menu-panel">
+          <svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <line x1="4" x2="20" y1="12" y2="12" stroke-linecap="round" stroke-width="2"></line>
+            <line x1="4" x2="20" y1="6" y2="6" stroke-linecap="round" stroke-width="2"></line>
+            <line x1="4" x2="20" y1="18" y2="18" stroke-linecap="round" stroke-width="2"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="sc-mobile-menu-panel" id="sc-mobile-menu-panel">
+    <a class="sc-mobile-menu-link" href="https://sparkedconnection.com/#how-it-works">How It Works</a>
+    <a class="sc-mobile-menu-link" href="https://sparkedconnection.com/plans/">Plans</a>
+    <a class="sc-mobile-menu-link" href="https://sparkedconnection.com/#events">Events</a>
+    <a class="sc-mobile-menu-link" href="https://sparkedconnection.com/the-science/">The Science</a>
+    <a class="sc-mobile-menu-link" href="https://articles.sparkedconnection.com/" rel="noopener noreferrer" target="_blank">Journal</a>
+    <a class="sc-mobile-menu-link sc-refer-link" href="https://www.sparkedconnection.com/refer-a-friend">Refer a Friend</a>
+    <a class="sc-mobile-menu-cta" href="https://sparkedconnection.com/enquiry" rel="noopener noreferrer" target="_blank">
+      <button class="sc-cta-spark-btn">Create Free Profile</button>
+    </a>
+  </div>
+
   <header>
     <div class="logo-wrap">
       <img
@@ -609,5 +845,30 @@
   <footer>
     &copy; 2026 &nbsp;·&nbsp; Sparked Connection &nbsp;·&nbsp; All Rights Reserved
   </footer>
+
+  <script>
+    (function () {
+      var toggle = document.getElementById('sc-mobile-menu-toggle');
+      var panel = document.getElementById('sc-mobile-menu-panel');
+      if (!toggle || !panel) return;
+      toggle.addEventListener('click', function () {
+        var isOpen = panel.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+      panel.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          panel.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+      window.addEventListener('resize', function () {
+        if (window.innerWidth >= 768) {
+          panel.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+  </script>
+
 </body>
 </html>
